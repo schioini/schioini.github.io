@@ -1,0 +1,10 @@
+body {
+	font-family: sans-serif;
+	max-width: 700px;
+	margin: 80px auto;
+	line-height: 1.6;
+}
+
+hi {
+	font-weight: 400;
+}
