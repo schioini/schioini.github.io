@@ -169,6 +169,31 @@ img { display: block; max-width: 100%; height: auto; }
   font-size: 0.9375rem;
 }
 
+.section-index ol li > span {
+  display: block;
+  font-size: 0.9375rem;
+}
+
+.section-index ol li:has(> span)::before {
+  content: none;
+}
+
+.section-index ol li > p {
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.section-index ol li > p + p {
+  margin-top: 0.75rem;
+}
+
+.section-index ol li + li {
+  margin-top: 1rem;
+}
+
 /* ─── Responsive: mobile / small screen ─────────────────────────────────── */
 @media (max-width: 680px) {
   :root {
