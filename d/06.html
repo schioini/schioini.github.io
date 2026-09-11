@@ -82,12 +82,16 @@
     .video-wrap {
       max-width: 100%;
       margin-top: 2rem;
+      padding: 75% 0 0 0;
+      position: relative;
     }
 
-    .video-wrap video {
-      display: block;
+    .video-wrap iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: auto;
+      height: 100%;
     }
 
     @media (max-width: 800px) {
@@ -238,10 +242,7 @@ Enfin, alors que certaines relations mûrissent avec le temps, d'autres résiden
       </div>
 
       <div class="video-wrap">
-        <video controls preload="metadata" poster="assets/simon-chioini_deer-lake_perfo01.jpg">
-          <source src="assets/simon-chioini_deer-lake_montage-performances.mov" type="video/quicktime">
-          Votre navigateur ne peut pas lire cette vidéo.
-        </video>
+        <iframe src="https://player.vimeo.com/video/1225975898?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Deer Lake — Extraits"></iframe>
       </div>
     </article>
   </main>
@@ -252,6 +253,8 @@ Enfin, alors que certaines relations mûrissent avec le temps, d'autres résiden
     <a href="https://schioini.bandcamp.com" target="_blank" rel="noopener">↗ Bandcamp</a>
     <a href="https://www.instagram.com/s.chioini/" target="_blank" rel="noopener">↗ Instagram</a>
   </footer>
+
+  <script src="https://player.vimeo.com/api/player.js"></script>
 
 </body>
 </html>

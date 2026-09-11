@@ -18,6 +18,19 @@
       height: auto;
     }
 
+    .media .video-embed {
+      padding: 75% 0 0 0;
+      position: relative;
+    }
+
+    .media .video-embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
     .media .audio-list {
       display: grid;
       gap: 0.5rem;
@@ -75,10 +88,9 @@
           <span><i>Deer Lake</i>, 2025-2026</span>
           <p>Performances sonores contextuelles, lectures-performances, musique électronique en direct et archives documentaires.</p>
           <div class="media">
-            <video controls preload="metadata" poster="../d/assets/simon-chioini_deer-lake_perfo01.jpg">
-              <source src="../d/assets/simon-chioini_deer-lake_montage-performances.mov" type="video/quicktime">
-              Votre navigateur ne peut pas lire cette vidéo.
-            </video>
+            <div class="video-embed">
+              <iframe src="https://player.vimeo.com/video/1225975898?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Deer Lake — Extraits"></iframe>
+            </div>
             <div class="audio-list">
               <div class="audio-item">
                 <p>1. Sounds</p>
