@@ -18,34 +18,58 @@
       height: auto;
     }
 
-    .media .video-embed {
-      padding: 75% 0 0 0;
-      position: relative;
-    }
-
-    .media .video-embed iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .media .audio-list {
-      display: grid;
-      gap: 0.5rem;
-      margin-top: 0.75rem;
-    }
-
-    .media .audio-item p {
-      margin-bottom: 0.25rem;
-      font-size: 0.8125rem;
-      color: var(--color-text);
-    }
-
     .media audio {
+      display: block;
       width: 100%;
+      margin-top: 0.75rem;
       height: 32px;
+    }
+
+    .track-list {
+      list-style: disc;
+      margin: 0.5rem 0 0 1.1rem;
+      font-size: 0.9375rem;
+      font-weight: 300;
+    }
+
+    .track-list li {
+      border-top: none;
+      padding: 0;
+      counter-increment: none;
+    }
+
+    .track-list li::before {
+      content: none;
+    }
+
+    .section-index ol .track-list li {
+      border-top: none;
+      padding: 0;
+    }
+
+    .section-index ol .track-list li::before {
+      content: none;
+    }
+
+    .photo-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .photo-gallery figure {
+      margin: 0;
+      max-width: 350px;
+    }
+
+    .photo-gallery img {
+      width: 100%;
+    }
+
+    .photo-gallery figcaption {
+      padding-top: 0.35rem;
+      color: var(--color-muted);
+      font-size: 0.75rem;
     }
 
     .video-embed {
@@ -83,6 +107,18 @@
         <li>
           <span><i>Échos du vivant</i>, 2026</span>
           <p>Parcours sonore <i>in situ</i>. En collaboration avec Myriam Boucher, Nicolas Bourgeois, AC Riznar, Ludovic Jolicoeur et Pomme M Presne-Poissant.</p>
+          <div class="media">
+            <div class="photo-gallery">
+              <figure>
+                <img src="../assets/simon-chioini_echos-du-vivant.png" alt="Parcours sonore in situ, Concerts aux Îles du Bic. Myriam Boucher, Nicolas Bourgeois, AC Riznar, Ludovic Jolicoeur et Pomme M Presne-Poissant. 2026" loading="lazy">
+                <figcaption>Photo : Mathieu Gosselin</figcaption>
+              </figure>
+            </div>
+            <audio controls preload="none">
+              <source src="../assets/simon-chioini_echos-du-vivant.mp3" type="audio/mpeg">
+              Votre navigateur ne prend pas en charge l'élément audio.
+            </audio>
+          </div>
         </li>
         <li>
           <span><i>Deer Lake</i>, 2025-2026</span>
@@ -91,68 +127,33 @@
             <div class="video-embed">
               <iframe src="https://player.vimeo.com/video/1225975898?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Deer Lake — Extraits"></iframe>
             </div>
-            <div class="audio-list">
-              <div class="audio-item">
-                <p>1. Sounds</p>
-                <audio controls preload="none">
-                  <source src="../d/assets/simon-chioini_deer-lake_01_sounds.mp3" type="audio/mpeg">
-                  Votre navigateur ne prend pas en charge l'élément audio.
-                </audio>
-              </div>
-              <div class="audio-item">
-                <p>2. Walking</p>
-                <audio controls preload="none">
-                  <source src="../d/assets/simon-chioini_deer-lake_02_walking.mp3" type="audio/mpeg">
-                  Votre navigateur ne prend pas en charge l'élément audio.
-                </audio>
-              </div>
-              <div class="audio-item">
-                <p>3. Dreamscape</p>
-                <audio controls preload="none">
-                  <source src="../d/assets/simon-chioini_deer-lake_03_dreamscape.mp3" type="audio/mpeg">
-                  Votre navigateur ne prend pas en charge l'élément audio.
-                </audio>
-              </div>
-              <div class="audio-item">
-                <p>4. Rain Sequence</p>
-                <audio controls preload="none">
-                  <source src="../d/assets/simon-chioini_deer-lake_04_rain-sequence.mp3" type="audio/mpeg">
-                  Votre navigateur ne prend pas en charge l'élément audio.
-                </audio>
-              </div>
-              <div class="audio-item">
-                <p>5. Circulation</p>
-                <audio controls preload="none">
-                  <source src="../d/assets/simon-chioini_deer-lake_05_circulation.mp3" type="audio/mpeg">
-                  Votre navigateur ne prend pas en charge l'élément audio.
-                </audio>
-              </div>
-              <div class="audio-item">
-                <p>6. Deer Lake</p>
-                <audio controls preload="none">
-                  <source src="../d/assets/simon-chioini_deer-lake_06_deer-lake.mp3" type="audio/mpeg">
-                  Votre navigateur ne prend pas en charge l'élément audio.
-                </audio>
-              </div>
-            </div>
           </div>
         </li>
         <li>
           <span><i>Ateliers de cocréation Son + Lieu</i>, 2023-2026</span>
           <p>Performances sonores contextuelles.</p>
-        </li>
-        <li>
-          <span><i>Espaces connectés</i>, 2025</span>
-          <p>Partition d'intentions.</p>
+          <div class="video-embed">
+            <iframe src="https://player.vimeo.com/video/1227841330?h=4d7efbe104&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Ateliers Son + Lieu —&nbsp;Extraits"></iframe>
+          </div>
         </li>
         <li>
           <span><i>Tasiujaq 93 (Distance)</i>, 10:30, 2025</span>
           <p>Pour mezzo-soprano et ensemble de 15 musicien·nes.</p>
+          <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/lPnWHEefhgE?si=KKE6b2PlkbY7IJOX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
         </li>
         <li>
           <span><i>Montréal rivières</i>, 61:00, 2025</span>
           <p>Électroacoustique. Album en collaboration avec Myriam Boucher, Gabriel·le Caux et Antonin GougeonMoisan.</p>
-          <p>— « Rivière 1 », 2:45 ; — « Rivière 4 », 5:34 ; — « Rivière 7 », 4:09.</p>
+          <ul class="track-list">
+            <li>2. « Rivière 1 », 2:45</li>
+            <li>6. « Rivière 4 », 5:34</li>
+            <li>10. « Rivière 7 », 4:09</li>
+          </ul>
+          <div class="media">
+            <iframe style="border: 0; width: 400px; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=770277889/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://lfo-lab.bandcamp.com/album/montr-al-rivi-res">Montréal rivières by Myriam Boucher • Gabriel·le Caux • Simon Chioini • Antonin Gougeon-Moisan</a></iframe>
+          </div>
         </li>
         <li>
           <span><i>Quelque part…</i>, 12:00, 2025</span>
@@ -164,18 +165,30 @@
         <li>
           <span><i>assemblage… Chabanel</i>, 08:04, 2023 ; 2025</span>
           <p>Installation audiovisuelle.</p>
+          <div class="video-embed">
+            <iframe src="https://player.vimeo.com/video/945858102?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="assemblage… Chabanel"></iframe>
+          </div>
         </li>
         <li>
           <span><i>rentrouvert, laisser ouvrir</i>, 30:00, 2024</span>
           <p>Performance-installation.</p>
+          <div class="video-embed">
+            <iframe src="https://player.vimeo.com/video/1227848870?h=ae93e6eca5&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="rentrouvert, laisser ouvrir (extrait)"></iframe>
+          </div>
         </li>
         <li>
           <span><i>Réservoir V (présence)</i>, 11:19, 2023</span>
           <p>Électroacoustique et performance.</p>
+          <div class="video-embed">
+            <iframe src="https://player.vimeo.com/video/946996231?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Réservoir V (présence)"></iframe>
+          </div>
         </li>
         <li>
           <span><i>fenêtre… assemblage</i>, 2023</span>
           <p>Performance-installation.</p>
+          <div class="video-embed">
+            <iframe src="https://player.vimeo.com/video/797543292?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="fenêtre… assemblage (2022)"></iframe>
+          </div>
         </li>
       </ol>
     </section>
