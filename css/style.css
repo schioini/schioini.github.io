@@ -138,6 +138,78 @@ img { display: block; max-width: 100%; height: auto; }
 .site-footer a { color: var(--color-muted); }
 .site-footer a:hover { color: var(--color-text); text-decoration: none; }
 
+/* ─── Oeuvres: albums + performances layout ─────────────────────────────── */
+.works-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  align-items: start;
+}
+
+.albums-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.album-item h2 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.album-item iframe {
+  max-width: 100%;
+}
+
+.performances-list {
+  font-size: 0.9375rem;
+  font-weight: 300;
+  color: var(--color-muted);
+}
+
+.performances-list h2 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 1.25rem;
+}
+
+.performances-list ol {
+  list-style: none;
+}
+
+.performance-entry {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.performance-year {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.performance-title {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.performance-venues {
+  list-style: disc;
+  margin: 0.25rem 0 0 1.1rem;
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+}
+
+@media (max-width: 680px) {
+  .works-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ─── Section index pages ────────────────────────────────────────────────── */
 .section-index h1 {
   font-size: 1rem;
